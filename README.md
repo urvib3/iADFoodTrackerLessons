@@ -7,5 +7,7 @@ If you've cloned from this project before, you can also go to Source Control > P
 
 Terminal: 
 If you prefer terminal, cd into whatever folder you want the project to be in, and clone. 
+```bash
 $cd Desktop
 $git clone https://github.com/urvib3/iADFoodTrackerLessons
+```
