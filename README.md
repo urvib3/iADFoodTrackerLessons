@@ -11,3 +11,7 @@ If you prefer terminal, cd into whatever folder you want the project to be in, a
 $cd Desktop
 $git clone https://github.com/urvib3/iADFoodTrackerLessons
 ```
+
+If you have Xcode 11, click on the link below, scroll to the very bottom of the "Work with View Controllers" section, and download file. 
+Open the zip file and open up the FoodTracker folder. To open it in Xcode, double click on the FoodTracker.xcodeproj file. 
+https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html#//apple_ref/doc/uid/TP40015214-CH6-SW1
