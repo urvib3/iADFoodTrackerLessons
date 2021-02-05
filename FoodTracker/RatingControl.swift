@@ -13,7 +13,22 @@ import UIKit
     //MARK: Properties
     private var ratingButtons = [UIButton]()
     
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionStates()
+        }
+    }
+    
+    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
+        didSet {
+            setupButtons()
+        }
+    }
+    @IBInspectable var starCount: Int = 5 {
+        didSet {
+            setupButtons()
+        }
+    }
 
     //MARK: Initialization
     
@@ -30,15 +45,33 @@ import UIKit
     //MARK: Private Methods
     private func setupButtons() {
         
-        for _ in 0..<5 {
+        // delete any existing buttons
+        for button in ratingButtons {
+            removeArrangedSubview(button)
+            button.removeFromSuperview()
+        }
+        ratingButtons.removeAll()
+        
+        // Import button images
+        let bundle = Bundle(for: type(of: self))
+        let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
+        let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+        let highlightedStar = UIImage(named: "highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+        
+        for _ in 0..<starCount {
             // Create the button
             let button = UIButton()
-            button.backgroundColor = UIColor.red
+        
+            // Set the button images
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected)
+            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
             
             // Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-            button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+            button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
+            button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             
             // Add target
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchUpInside)
@@ -49,13 +82,33 @@ import UIKit
             // Add the new button to the rating button array
             ratingButtons.append(button)
         }
-        
+        updateButtonSelectionStates()
         
     }
     
     //MARK: Button Actions
     @objc func ratingButtonTapped(button: UIButton) {
-        print("Button pressed")
+    
+        // Getting index of the button in the array
+        guard let index = ratingButtons.firstIndex(of: button) else {
+            fatalError("The button, \(button), is not in the ratingButton array: \(ratingButtons)")
+        }
+        
+        // Calculate the rating of the selected button
+        let selectedRating = index + 1
+        
+        if selectedRating == rating {
+            rating = 0
+        } else {
+            rating = selectedRating
+        }
+        
+    }
+    
+    private func updateButtonSelectionStates() {
+        for(index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
+        }
     }
 
 }
