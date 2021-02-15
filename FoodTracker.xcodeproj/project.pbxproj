@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9007A7BC25D5E9CF00D73982 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9007A7BB25D5E9CF00D73982 /* Meal.swift */; };
 		900861AE258C166C0069AA54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900861AD258C166C0069AA54 /* AppDelegate.swift */; };
 		900861B0258C166C0069AA54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900861AF258C166C0069AA54 /* SceneDelegate.swift */; };
 		900861B2258C166C0069AA54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900861B1258C166C0069AA54 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9007A7BB25D5E9CF00D73982 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		900861AA258C166C0069AA54 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900861AD258C166C0069AA54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		900861AF258C166C0069AA54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				900861AD258C166C0069AA54 /* AppDelegate.swift */,
 				900861AF258C166C0069AA54 /* SceneDelegate.swift */,
 				900861B1258C166C0069AA54 /* ViewController.swift */,
+				9007A7BB25D5E9CF00D73982 /* Meal.swift */,
 				905D90FB25C37AFD00F8AC45 /* RatingControl.swift */,
 				900861B3258C166C0069AA54 /* Main.storyboard */,
 				900861B6258C166D0069AA54 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9007A7BC25D5E9CF00D73982 /* Meal.swift in Sources */,
 				905D90FC25C37AFD00F8AC45 /* RatingControl.swift in Sources */,
 				900861B2258C166C0069AA54 /* ViewController.swift in Sources */,
 				900861AE258C166C0069AA54 /* AppDelegate.swift in Sources */,
@@ -442,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
