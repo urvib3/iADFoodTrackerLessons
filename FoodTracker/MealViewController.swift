@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //MARK: Properties
     
-    @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -30,7 +29,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
     }
 
     //MARK: Actions
@@ -78,7 +76,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        mealNameLabel.text = "Default Text"
     }
 }
 

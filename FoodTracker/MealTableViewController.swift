@@ -32,9 +32,11 @@ class MealTableViewController: UITableViewController {
         
         let cellIdentifier = "MealTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell")
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            }
+
+        
         
         //Configure the cell
         let meal = meals[indexPath.row]
