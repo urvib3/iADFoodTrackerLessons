@@ -12,6 +12,5 @@ $cd Desktop
 $git clone https://github.com/urvib3/iADFoodTrackerLessons
 ```
 
-If you have Xcode 11, click on the link below, scroll to the very bottom of the "Work with View Controllers" section, and download file. 
-Open the zip file and open up the FoodTracker folder. To open it in Xcode, double click on the FoodTracker.xcodeproj file. 
+The tutorial we're following is linked below as well. If you have an older version of Xcode, you can try cloning the files given at the end of each section, but keep in mind that the tutorial below uses Swift 3.0. If your IDE is updated to Swift 4.0, you won't be able to run the files (you'll get a pop up when you try running saying that swift 3.0 isn't compatible). 
 https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html#//apple_ref/doc/uid/TP40015214-CH6-SW1
