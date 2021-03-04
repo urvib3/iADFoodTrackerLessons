@@ -20,12 +20,12 @@
                                 <rect key="frame" x="5" y="108" width="409" height="555.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S93-cW-Shz">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="136.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="130.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-mo-hN1">
-                                        <rect key="frame" x="0.0" y="151.5" width="345" height="345"/>
+                                        <rect key="frame" x="0.0" y="145.5" width="345" height="345"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h5t-mo-hN1" secondAttribute="height" multiplier="1:1" id="4cu-Xc-dwF"/>
@@ -35,7 +35,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="euF-nJ-Evi" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="511.5" width="252" height="44"/>
+                                        <rect key="frame" x="0.0" y="505.5" width="252" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                 <size key="value" width="44" height="44"/>
@@ -67,6 +67,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="S93-cW-Shz" id="cbN-Vy-BMe"/>
                         <outlet property="photoImageView" destination="h5t-mo-hN1" id="nav-4N-WuY"/>
+                        <outlet property="ratingControl" destination="euF-nJ-Evi" id="tUQ-0Y-aYO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
