@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atx-XR-fXz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atx-XR-fXz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,16 +61,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a3w-zY-LLi">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3iS-4h-4jF"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Xa2-Yq-5oY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3iS-4h-4jF">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="Nfn-Qv-Saf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Xa2-Yq-5oY">
+                            <connections>
+                                <segue destination="PLV-p7-yIO" kind="unwind" unwindAction="unwindToMealListWithSender:" id="ya8-4n-viF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="S93-cW-Shz" id="cbN-Vy-BMe"/>
                         <outlet property="photoImageView" destination="h5t-mo-hN1" id="nav-4N-WuY"/>
                         <outlet property="ratingControl" destination="euF-nJ-Evi" id="tUQ-0Y-aYO"/>
+                        <outlet property="saveButton" destination="Xa2-Yq-5oY" id="cJc-df-WsF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="PLV-p7-yIO" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="WMh-mS-ygo">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Aco-tk-lyQ"/>
