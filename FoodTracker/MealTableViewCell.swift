@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MealTableViewCell: UITableViewCell {
 
     //MARK: Properties
